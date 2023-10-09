@@ -29,6 +29,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_svg: ^0.22.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -38,6 +39,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -67,6 +69,10 @@ flutter:
     - assets/images/onboarding_logo2.svg
     - assets/images/onboarding_logo3.svg
     - assets/images/onboarding_logo4.svg
+    - assets/images/hollow_cirlce_ic.svg
+    - assets/images/left_arrow_ic.svg
+    - assets/images/right_arrow_ic.svg
+    - assets/images/solid_circle_ic.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -80,14 +86,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: sf_display_bold
-       fonts:
-         - asset: assets/fonts/sf_display_bold.ttf
-           weight: 700
-         - asset: assets/fonts/sf_display_medium.ttf
-           weight: 500
-         - asset: assets/fonts/sf_display_regular.ttf
-           weight: 400
+    - family: sf_display_bold
+      fonts:
+        - asset: assets/fonts/sf_display_bold.ttf
+          weight: 700
+        - asset: assets/fonts/sf_display_medium.ttf
+          weight: 500
+        - asset: assets/fonts/sf_display_regular.ttf
+          weight: 400
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
