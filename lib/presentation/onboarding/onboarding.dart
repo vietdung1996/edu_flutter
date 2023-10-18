@@ -6,6 +6,7 @@ import 'package:lecture_4/presentation/resources/assets_manager.dart';
 import 'package:lecture_4/presentation/resources/strings_manager.dart';
 import 'package:lecture_4/presentation/resources/values_manager.dart';
 
+import '../../domain/model.dart';
 import '../resources/routes_manager.dart';
 import '/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
@@ -23,16 +24,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
   PageController _pageController = PageController(initialPage: 0);
 
-  List<SliderObject> _getSliderData() => [
-        SliderObject(AppStrings.onBoardingSubTitle1,
-            AppStrings.onBoardingSubTitle1, ImageAssets.onBoardingLogo1),
-        SliderObject(AppStrings.onBoardingSubTitle2,
-            AppStrings.onBoardingSubTitle2, ImageAssets.onBoardingLogo2),
-        SliderObject(AppStrings.onBoardingSubTitle3,
-            AppStrings.onBoardingSubTitle3, ImageAssets.onBoardingLogo3),
-        SliderObject(AppStrings.onBoardingSubTitle4,
-            AppStrings.onBoardingSubTitle4, ImageAssets.onBoardingLogo4)
-      ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -199,10 +191,4 @@ class OnBoardingPage extends StatelessWidget {
   }
 }
 
-class SliderObject {
-  String title;
-  String subTitle;
-  String image;
 
-  SliderObject(this.title, this.subTitle, this.image);
-}
