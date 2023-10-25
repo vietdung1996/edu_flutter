@@ -19,7 +19,7 @@ class OnBoardingViewModel extends BaseViewModel
   //inputs
   @override
   void dispose() {
-    streamController.close()
+    streamController.close();
   }
 
   @override
@@ -29,17 +29,30 @@ class OnBoardingViewModel extends BaseViewModel
   }
 
   @override
-  void goNext() {
-
+  int goNext() {
+    int nextIndex = currentIndex++; // +1
+    if (nextIndex >= listSlider.length) {
+      currentIndex = 0; // infinite loop to go to first item inside the slider
+    }
+    postDataToView();
+    return currentIndex;
   }
 
   @override
-  void goPrevious() {
-
+  int goPrevious() {
+    int previousIndex = currentIndex--; // -1
+    if (previousIndex == -1) {
+      currentIndex =
+          listSlider.length - 1; // infinite loop to go to the length of slider list
+    }
+    postDataToView();
+    return currentIndex;
   }
 
   @override
   void onPageChange(int index) {
+    currentIndex = index;
+    postDataToView();
 
   }
 
